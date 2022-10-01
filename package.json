@@ -1,6 +1,6 @@
 {
   "name": "react-router-prompt",
-  "version": "0.2.2",
+  "version": "0.3.1-beta",
   "description": "React Router Navigation Prompt for v6",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
