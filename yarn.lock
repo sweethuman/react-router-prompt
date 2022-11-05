@@ -1351,6 +1351,13 @@
   dependencies:
     "@types/node" "*"
 
+"@types/history@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@types/history/-/history-5.0.0.tgz#29f919f0c8e302763798118f45b19cab4a886f14"
+  integrity sha512-hy8b7Y1J8OGe6LbAjj3xniQrj3v6lsivCcrmf4TzSgPzLkhIeKgc5IZnT7ReIqmEuodjfO8EYAuoFvIrHi/+jQ==
+  dependencies:
+    history "*"
+
 "@types/istanbul-lib-coverage@*", "@types/istanbul-lib-coverage@^2.0.0", "@types/istanbul-lib-coverage@^2.0.1":
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/@types/istanbul-lib-coverage/-/istanbul-lib-coverage-2.0.4.tgz#8467d4b3c087805d63580480890791277ce35c44"
@@ -3598,7 +3605,7 @@ has@^1.0.3:
   dependencies:
     function-bind "^1.1.1"
 
-history@^5.3.0:
+history@*, history@^5.3.0:
   version "5.3.0"
   resolved "https://registry.yarnpkg.com/history/-/history-5.3.0.tgz#1548abaa245ba47992f063a0783db91ef201c73b"
   integrity sha512-ZqaKwjjrAYUYfLG+htGaIIZ4nioX2L70ZUMIFysS3xvBsSG4x/n1V6TXV3N8ZYNuFGlDirFg32T7B6WOUPDYcQ==
@@ -5427,7 +5434,7 @@ react-router-dom@^6.4.1:
     "@remix-run/router" "1.0.1"
     react-router "6.4.1"
 
-react-router@6.4.1:
+react-router@6.4.1, react-router@^6.4.1:
   version "6.4.1"
   resolved "https://registry.yarnpkg.com/react-router/-/react-router-6.4.1.tgz#dd9cc4dfa264751d143a4b6c9d4faa60ab3ce26c"
   integrity sha512-OJASKp5AykDWFewgWUim1vlLr7yfD4vO/h+bSgcP/ix8Md+LMHuAjovA74MQfsfhQJGGN1nHRhwS5qQQbbBt3A==

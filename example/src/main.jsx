@@ -1,11 +1,17 @@
 import React, { useState } from "react";
 import { createRoot } from "react-dom/client";
+import { createBrowserHistory } from "history";
 
 import ReactRouterPrompt from "../../src";
 
 import { ErrorBoundary } from "react-error-boundary";
 
-import { Routes, Route, NavLink, BrowserRouter } from "react-router-dom";
+import {
+  Routes,
+  Route,
+  NavLink,
+  unstable_HistoryRouter as HistoryRouter,
+} from "react-router-dom";
 
 export default function App() {
   return (
@@ -82,8 +88,8 @@ const container = document.getElementById("root");
 const root = createRoot(container);
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <HistoryRouter history={createBrowserHistory()}>
       <App />
-    </BrowserRouter>
+    </HistoryRouter>
   </React.StrictMode>
 );

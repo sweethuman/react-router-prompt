@@ -1,15 +1,26 @@
-import { useContext, useEffect } from "react";
-import { Blocker, Transition } from "history";
-// @ts-ignore
-import { UNSAFE_NavigationContext as NavigationContext } from "react-router-dom";
+import { useContext, useEffect, ContextType } from "react";
+import { Blocker, Transition, History } from "history";
+import {
+  Navigator as BaseNavigator,
+  UNSAFE_NavigationContext as NavigationContext,
+} from "react-router-dom";
+
+interface Navigator extends BaseNavigator {
+  block: History["block"];
+}
+
+type NavigationContextWithBlock = ContextType<typeof NavigationContext> & {
+  navigator: Navigator;
+};
 
 function useBlocker(blocker: Blocker, when = true) {
-  const { navigator } = useContext(NavigationContext);
+  const { navigator } = useContext(
+    NavigationContext
+  ) as NavigationContextWithBlock;
 
   useEffect(() => {
     if (!when) return;
 
-    // @ts-ignore
     const unblock = navigator.block((tx: Transition) => {
       const autoUnblockingTx = {
         ...tx,
